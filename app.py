@@ -405,4 +405,5 @@ if __name__ == '__main__':
     print('  SSG 대시보드 서버 시작!')
     print('  브라우저에서 http://localhost:5000 접속하세요')
     print('=' * 50)
-    app.run(debug=False, port=5000)
+    import os
+app.run(debug=False, host='0.0.0.0', port=int(os.environ.get('PORT',5000)))
